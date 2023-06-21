@@ -1,0 +1,186 @@
+// Вдохновение https://tailwindcss.com/docs/
+// v 0.3 - 20.04.2023
+// Config:
+$xs: 320px; // min-width: 320px; etc...
+$sm: 480px;
+$md: 576px;
+$lg: 768px;
+$xl: 992px;
+$xxl: 1200px;
+// $xxl: 1280px;
+$xxxl: 1440px;
+// $xxxl: 1536px;
+// $xxxl: 1600px;
+html {
+  // For rem:
+  // font-size: 16px;
+}
+
+// display:
+.df {
+  display: flex;
+}
+.db {
+  display: block;
+}
+
+.fdc {
+  flex-direction: column;
+}
+
+// justify-
+.jcc {
+  justify-content: space-between;
+}
+.jcsb {
+  justify-content: center;
+}
+
+// align-
+.aic {
+  align-items: center;
+}
+.asc {
+  align-self: center;
+}
+
+.tr45 {
+  transform: rotate(45deg);
+}
+.tr90 {
+  transform: rotate(90deg);
+}
+
+.o1 {
+  order: 1;
+}
+.o2 {
+  order: 2;
+}
+.o3 {
+  order: 3;
+}
+.o4 {
+  order: 4;
+}
+.o5 {
+  order: 5;
+}
+
+.fs0 {
+  flex-shrink: 0;
+}
+
+// margin:
+.ma {
+  margin: auto;
+}
+.mb1 {
+  margin-bottom: 1rem;
+}
+.mb2 {
+  margin-bottom: 2rem;
+}
+.mb3 {
+  margin-bottom: 3rem;
+}
+.mb4 {
+  margin-bottom: 4rem;
+}
+.mb5 {
+  margin-bottom: 5rem;
+}
+// TODO сделать формулой
+.ml1vw {
+  margin-left: 1vw;
+}
+.ml2vw {
+  margin-left: 2vw;
+}
+.ml3vw {
+  margin-left: 3vw;
+}
+
+.ml1rem {
+  margin-left: 1rem;
+}
+.ml2rem {
+  margin-left: 2rem;
+}
+.ml3rem {
+  margin-left: 3rem;
+}
+
+// height
+.h40 {
+  height: 40%;
+}
+.h50 {
+  height: 50%;
+}
+.h60 {
+  height: 60%;
+}
+.h70 {
+  height: 70%;
+}
+.h100 {
+  height: 100%;
+}
+
+// width
+.w40 {
+  width: 40%;
+}
+.w50 {
+  width: 50%;
+}
+.w60 {
+  width: 60%;
+}
+.w100 {
+  width: 100%;
+}
+
+// max-width
+.maxwu {
+  max-width: unset;
+}
+
+// min-width
+.minwu {
+  min-width: unset;
+}
+
+.md {
+  @media screen and (min-width: $md) {
+    &-wa {
+      width: auto;
+    }
+  }
+}
+
+.lg {
+  @media screen and (min-width: $lg) {
+    &-wa {
+      width: auto;
+    }
+  }
+}
+
+.cb {
+  clear: both;
+}
+
+// text-align
+.tac {
+  text-align: center;
+}
+// TODO Надо функцией сделать на все классы добавлние -i (!important)
+.tac-i {
+  text-align: center!important;
+}
+
+.cd {
+  cursor: default;
+}

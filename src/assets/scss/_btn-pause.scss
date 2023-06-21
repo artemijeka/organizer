@@ -1,0 +1,15 @@
+.btn-pause {
+
+  width: 56px;
+  height: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #ff0000;
+  border-radius: 50%;
+  &__ico {
+    width: 47px;
+    height: 47px;
+    transform: unset;
+  }
+}

@@ -1,0 +1,35 @@
+.btn {
+  width: 56px;
+  height: 56px;
+  background: #d9d9d9;
+
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__ico {
+    width: 22px;
+    height: 28px;
+
+    &.--pomodoro {
+      transform: unset;
+      height: 36.75px;
+      width: 31.5px;
+    }
+    &.--organizer {
+      width: 35px;
+      height: 35px;
+    }
+    &.--triangle {
+      transform: translateX(3px);
+    }
+    &.--plus {
+      fill: #000;
+    }
+  }
+  &.--small {
+    width: 26px;
+    height: 26px;
+  }
+}
