@@ -425,7 +425,6 @@ export const useTasks = defineStore('tasks', () => {
       stop: newTimerEnd,
       duration: newTimerEnd-newTimerStart,
     }
-
   }
 
 
@@ -442,6 +441,19 @@ export const useTasks = defineStore('tasks', () => {
     setDurationTimerToday(taskID)
     // И записать лог задач в localstorage
     setTasksDataToLocalStorage()
+  }
+
+
+
+  function addTaskTimerNote(taskID: number, timerItemStartID: number, note: string) {
+    console.log('taskID')
+    console.log(taskID)
+    console.log('timerItemStartID')
+    console.log(timerItemStartID)
+    console.log('state.data[taskID].timerLog[timerItemStartID]')
+    console.log(state.data[taskID].timerLog[timerItemStartID])
+    let timerItem = state.data[taskID].timerLog[timerItemStartID]
+    // timerItem.note = note
   }
 
 
@@ -484,5 +496,6 @@ export const useTasks = defineStore('tasks', () => {
     showTimerList,
     deleteTaskTimerItem,
     addTaskTimerItem,
+    addTaskTimerNote,
   }
 })

@@ -42,12 +42,49 @@
       right: -0.9rem;
     }
 
+    &:hover & {
+      &-remove,
+      &-remove-accept,
+      &-start,
+      &-stop,
+      &-timerlist-open {
+        opacity: 1;
+      }
+    }
+
+    &.--selected & {
+      &-ico.--start {
+        opacity: 1;
+      }
+
+      &-ico.--stop {
+        opacity: 1;
+      }
+    }
+
+    &.--selected:hover & {
+      &-ico.--stop {
+        opacity: 1;
+      }
+    }
+
+    &-btn:hover & {
+      &-ico {
+        transform: scale(2.5);
+        &.--close {
+          transform: scale(2.5) rotate(45deg);
+        }
+      }
+    }
+
     &-start {
       display: inline-flex;
       align-items: center;
       margin-right: 0.3rem;
+      opacity: 0;
 
       &.--active {
+        opacity: 1;
         pointer-events: none;
       }
     }
@@ -68,24 +105,28 @@
       display: inline-flex;
       align-items: center;
       pointer-events: none;
+      opacity: 0;
 
       margin-left: 0.3rem;
 
       &.--active {
+        opacity: 1;
         pointer-events: initial;
       }
     }
 
+
     &-ico {
+      width: 0.7rem;
+      height: 0.7rem;
+
       display: inline-flex;
-      opacity: 0;
+
+      pointer-events: none;
+
       transition: 300ms;
 
-      background-color: white;
-
-      &:hover {
-        transform: scale(2.5);
-      }
+      // background-color: white;
 
       &.--start {
         width: 0.7rem;
@@ -106,9 +147,9 @@
         width: 0.85rem;
         height: 0.85rem;
         fill: black;
-        opacity: 1;
 
         border-radius: 50%;
+        background-color: white;
         transform: rotate(45deg);
 
         &:hover {
@@ -120,7 +161,6 @@
         width: 0.85rem;
         height: 0.85rem;
         fill: black;
-        opacity: 1;
 
         border-radius: 50%;
         &:hover {
@@ -133,7 +173,6 @@
         height: 0.85rem;
         stroke: black;
         fill: transparent;
-        opacity: 1;
 
         border-radius: 50%;
         &:hover {
@@ -153,12 +192,24 @@
         }
       }
 
+      &.--edit {
+        width: 0.85rem;
+        height: 0.85rem;
+        fill: black;
+      }
+
+      &.--note-edit {
+        width: 1rem;
+        height: 1rem;
+      }
+
       &.--red {
         fill: red;
       }
     }
 
     &-name {
+      min-width: 18rem;
       font-size: 1rem;
     }
 
@@ -183,8 +234,9 @@
         width: 1rem;
         height: 1rem;
 
-        margin-left: 0.25rem;
+        opacity: 0;
 
+        margin-left: 0.25rem;
         &:hover {
           z-index: 5;
         }
@@ -197,21 +249,66 @@
         top: 0;
       }
 
-      &-item {
-        margin-top: 0.4rem;
-        margin-bottom: 0.4rem;
-      }
       &-add {
         display: flex;
         margin: auto;
       }
     }
 
+    &-timeritem {
+      margin-top: 0.4rem;
+      margin-bottom: 0.4rem;
+
+      &-remove,
+      &-edit,
+      &-note-edit {
+        opacity: 0;
+      }
+
+      &-remove {
+        margin-left: 1rem;
+      }
+      
+      &-note {
+        width: 6rem;
+        display: none;
+        border: 1px solid black;
+
+        margin-left: 0.5rem;
+        &.--active {
+          display: inline-flex;
+        }
+      }
+
+      &-note-edit {
+        margin-left: 1rem;
+      }
+      &-time {
+        display: inline-flex;
+        min-width: 12.5rem;
+      }
+
+      &-edit {
+        margin-left: 1rem;
+      }
+
+      &:hover & {
+        &-remove,
+        &-note-edit,
+        &-edit {
+          opacity: 1;
+        }
+      }
+    }
+
     &-remove,
     &-remove-accept {
-      display: flex;
       width: 1rem;
       height: 1rem;
+      
+      display: flex;
+      opacity: 0;
+
       margin-left: 0.3rem;
     }
 
@@ -219,30 +316,6 @@
       margin-left: 0.4rem;
     }
 
-    &:hover & {
-
-      &-ico.--timerlist,
-      &-ico.--start,
-      &-ico.--remove {
-        opacity: 1;
-      }
-    }
-
-    &.--selected & {
-      &-ico.--start {
-        opacity: 1;
-      }
-
-      &-ico.--stop {
-        opacity: 1;
-      }
-    }
-
-    &.--selected:hover & {
-      &-ico.--stop {
-        opacity: 1;
-      }
-    }
 
     // &-context {
     //   display: none;
