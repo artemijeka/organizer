@@ -1,15 +1,21 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import { ref, reactive, onMounted, onUnmounted, computed, watch, provide } from 'vue'
+// import { RouterLink, RouterView } from 'vue-router'
+import { onMounted } from 'vue'
 
-import { useFetch } from './helpers/fetch'
+// import { useFetch } from './helpers/fetch'
 
 import SVGSprite from '@/components/SVGSprite.vue'
 import Pomodoro from '@/components/Pomodoro.vue'
-import Timer from '@/components/Timer.vue'
-import BtnTasks from '@/components/BtnTasks.vue'
-import Tasks from '@/components/Tasks.vue'
-import { directive } from '@babel/types'
+// import Timer from '@/components/Timer.vue'
+// import BtnTasks from '@/components/BtnTasks.vue'
+// import Tasks from '@/components/Tasks.vue'
+// import { directive } from '@babel/types'
+
+
+
+onMounted(()=>{
+  window.addEventListener('touchstart', ()=>{}, {capture: true});
+})
 
 
 
@@ -40,7 +46,6 @@ import { directive } from '@babel/types'
 
 <template>
   <SVGSprite />
-  <RouterLink to="" />
 
 
 
@@ -53,13 +58,13 @@ import { directive } from '@babel/types'
       <!-- <BtnTasks /> -->
     </div>
 
-    <div class="tasks__box">
+    <!-- <div class="tasks__box">
       <Tasks />
-    </div>
+    </div> -->
 
   </div>
 
 
 
-  <RouterView />
+  <!-- <RouterView /> -->
 </template>

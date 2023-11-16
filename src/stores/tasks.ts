@@ -40,8 +40,8 @@ export const useTasks = defineStore('tasks', () => {
     }
   })
 
-  console.log('state.curTask')
-  console.log(state.curTask)
+  // console.log('state.curTask')
+  // console.log(state.curTask)
 
 
 
@@ -288,16 +288,15 @@ export const useTasks = defineStore('tasks', () => {
 
 
   function setTasksDataToLocalStorage() {
-    console.log('setTasksDataToLocalStorage')
+    // console.log('setTasksDataToLocalStorage')
     localStorage.setItem('taskTimerLog', JSON.stringify(state.data))
   }
 
 
 
   function setTasksLogFromLocalStorageToState() {
-    console.log('setTasksLogFromLocalStorageToState()')
+    // console.log('setTasksLogFromLocalStorageToState()')
     const strTaskTimerLog = localStorage.getItem('taskTimerLog')
-
     // console.log('strTaskTimerLog')
     // console.log(strTaskTimerLog)
 
@@ -310,8 +309,8 @@ export const useTasks = defineStore('tasks', () => {
 
 
   function createNewTask(taskName = '') {
-    console.log('state.data')
-    console.log(state.data)
+    // console.log('state.data')
+    // console.log(state.data)
 
     let tasksNewID;
     if (Object.keys(state.data).length>0) {
@@ -346,7 +345,7 @@ export const useTasks = defineStore('tasks', () => {
   
 
   function deleteTask(id: number) {
-    console.log(id)
+    // console.log(id)
     delete state.data[id]
     setTasksDataToLocalStorage()
   }
@@ -389,8 +388,8 @@ export const useTasks = defineStore('tasks', () => {
 
   function addTaskTimerItem(taskID: number, newTimer: string) {
     const timer = convertStringToTimerObject(newTimer)
-    console.log('timer')
-    console.log(timer)
+    // console.log('timer')
+    // console.log(timer)
 
     // console.log('state.data[taskID].timerLog')
     // console.log(state.data[taskID].timerLog)
@@ -410,8 +409,8 @@ export const useTasks = defineStore('tasks', () => {
     const startDayS = getStartDayS()
     let newTimerStart = startDayS
     let newTimerEnd = startDayS
-    console.log('startDayS')
-    console.log(startDayS)
+    // console.log('startDayS')
+    // console.log(startDayS)
     newTimerStart+=Number(start[0])*60*60
     newTimerStart+=Number(start[1])*60
     newTimerStart+=Number(start[2])
@@ -446,12 +445,12 @@ export const useTasks = defineStore('tasks', () => {
 
 
   function addTaskTimerNote(taskID: number, timerItemStartID: number, note: string) {
-    console.log('taskID')
-    console.log(taskID)
-    console.log('timerItemStartID')
-    console.log(timerItemStartID)
-    console.log('state.data[taskID].timerLog[timerItemStartID]')
-    console.log(state.data[taskID].timerLog[timerItemStartID])
+    // console.log('taskID')
+    // console.log(taskID)
+    // console.log('timerItemStartID')
+    // console.log(timerItemStartID)
+    // console.log('state.data[taskID].timerLog[timerItemStartID]')
+    // console.log(state.data[taskID].timerLog[timerItemStartID])
     let timerItem = state.data[taskID].timerLog[timerItemStartID]
     // timerItem.note = note
   }

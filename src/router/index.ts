@@ -6,17 +6,17 @@ const router = createRouter({
 })
 
 // This callback runs before every route change, including on page load.
-router.beforeEach((to, from, next) => {
-  // console.log('to')
-  // console.log(to)
+// router.beforeEach((to, from, next) => {
+//   // console.log('to')
+//   // console.log(to)
 
-  // console.log('from')
-  // console.log(from)
+//   // console.log('from')
+//   // console.log(from)
 
-  // console.log('next')
-  // console.log(next)
+//   // console.log('next')
+//   // console.log(next)
 
-  next()
-})
+//   next()
+// })
 
 export default router

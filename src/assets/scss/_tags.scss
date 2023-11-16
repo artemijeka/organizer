@@ -2,3 +2,38 @@ html {
   font-size: 14px;
   font-family: 'Arial', sans-serif;
 }
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-align: center;
+
+  }
+
+  p {
+    font-size: 1.4rem;
+    width: 100%;
+  }
+
+  a {
+    font-size: 1.4rem;
+
+    text-decoration: underline;
+  }
+}
